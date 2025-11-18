@@ -12,6 +12,13 @@ public class Main {
         System.out.println("digite a moeda de destino: ");
         var moedaDestino = sc.nextLine();
         System.out.println(consultaMoedaServices.consulta(moedaOrigem, moedaDestino));
+        System.out.println("Informações filtradas: "+ consultaMoedaServices.moedaFiltrada());
 
+        System.out.println("Digite valor a ser convertido: ");
+        var valor = sc.nextBigDecimal();
+        System.out.printf("""
+                CONVERTENDO DE %s PARA %s
+                RESULTADO: %.2f
+                """, moedaOrigem, moedaDestino, (consultaMoedaServices.converterMoedas(valor)));
     }
 }
