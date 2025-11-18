@@ -17,7 +17,6 @@ public class ConexaoHttp {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl))
-                .GET()
                 .build();
 
         try{
