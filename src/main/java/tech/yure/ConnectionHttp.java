@@ -5,10 +5,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class ConexaoHttp {
+public class ConnectionHttp {
     private HttpClient client;
 
-    public ConexaoHttp() {
+    public ConnectionHttp() {
         this.client = HttpClient.newHttpClient();
     }
 
@@ -23,7 +23,7 @@ public class ConexaoHttp {
         try{
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (Exception e) {
-            System.out.println("Erro ao consultar dados... Verifique a conexão da API!");
+            System.out.println("Erro ao consultar dados... Verifique a conexão da API!" + e.getMessage());
         }
         return response.body();
     }
