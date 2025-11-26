@@ -17,7 +17,6 @@ public class ConnectionHttp {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl))
-                .GET()
                 .build();
 
         try{
